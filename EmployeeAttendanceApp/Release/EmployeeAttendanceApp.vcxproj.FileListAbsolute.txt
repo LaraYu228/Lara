@@ -1,0 +1,3 @@
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Release\EmployeeAttendanceApp.vcxproj.AssemblyReference.cache
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Release\EmployeeAttendanceApp.MainForm.resources
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Release\EmployeeAttendanceApp.vcxproj.GenerateResource.cache

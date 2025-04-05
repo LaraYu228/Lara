@@ -1,0 +1,1224 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.VBIDE.5.3, Version=5.3.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c: 
+	hash=None, flags=None
+Interface VBIDE.Application: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Version 'get ' : 
+  Methods:
+    get_Version(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct VBIDE.vbextFileTypes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbextFileTypes vbextFileTypeForm = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeModule = 1 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeClass = 2 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeProject = 3 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeExe = 4 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeFrx = 5 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeRes = 6 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeUserControl = 7 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypePropertyPage = 8 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeDocObject = 9 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeBinary = 10 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeGroupProject = 11 : Public, Static, Literal, HasDefault
+    VBIDE.vbextFileTypes vbextFileTypeDesigners = 12 : Public, Static, Literal, HasDefault
+Interface VBIDE.VBE: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE.Application
+  Properties:
+    System.String Version 'get ' : 
+    VBIDE.VBProjects VBProjects 'get ' : 
+    Microsoft.Office.Core.CommandBars CommandBars 'get ' : 
+    VBIDE.CodePanes CodePanes 'get ' : 
+    VBIDE.Windows Windows 'get ' : 
+    VBIDE.Events Events 'get ' : 
+    VBIDE.VBProject ActiveVBProject 'get set' : 
+    VBIDE.VBComponent SelectedVBComponent 'get ' : 
+    VBIDE.Window MainWindow 'get ' : 
+    VBIDE.Window ActiveWindow 'get ' : 
+    VBIDE.CodePane ActiveCodePane 'get set' : 
+    VBIDE.Addins Addins 'get ' : 
+  Methods:
+    get_Version(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBProjects(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CommandBars(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CodePanes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Windows(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Events(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ActiveVBProject(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ActiveVBProject(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelectedVBComponent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MainWindow(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ActiveWindow(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ActiveCodePane(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ActiveCodePane(CodePane(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Addins(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct VBIDE.vbext_WindowType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_WindowType vbext_wt_CodeWindow = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Designer = 1 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Browser = 2 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Watch = 3 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Locals = 4 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Immediate = 5 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_ProjectWindow = 6 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_PropertyWindow = 7 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Find = 8 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_FindReplace = 9 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_Toolbox = 10 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_LinkedWindowFrame = 11 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_MainWindow = 12 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowType vbext_wt_ToolWindow = 15 : Public, Static, Literal, HasDefault
+Struct VBIDE.vbext_WindowState: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_WindowState vbext_ws_Normal = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowState vbext_ws_Minimize = 1 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_WindowState vbext_ws_Maximize = 2 : Public, Static, Literal, HasDefault
+Interface VBIDE.Window: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Windows Collection 'get ' : 
+    System.String Caption 'get ' : 
+    Boolean Visible 'get set' : 
+    Int32 Left 'get set' : 
+    Int32 Top  'get set' : 
+    Int32 Width 'get set' : 
+    Int32 Height 'get set' : 
+    VBIDE.vbext_WindowState WindowState 'get set' : 
+    VBIDE.vbext_WindowType Type 'get ' : 
+    VBIDE.LinkedWindows LinkedWindows 'get ' : 
+    VBIDE.Window LinkedWindowFrame 'get ' : 
+    Int32 HWnd 'get ' : 
+  Methods:
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Caption(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Left(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Left(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Top(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Top(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Height(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_WindowState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_WindowState(vbext_WindowState(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SetFocus(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SetKind(vbext_WindowType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_LinkedWindows(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LinkedWindowFrame(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Detach(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Attach(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_HWnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface VBIDE._Windows_old: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface VBIDE._Windows: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._Windows_old
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateToolWindow(AddIn(In, HasFieldMarshal), String(In, HasFieldMarshal), String(In, HasFieldMarshal), String(In, HasFieldMarshal), Object&(In, Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.WindowsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._Windows
+    VBIDE._Windows_old
+    System.Collections.IEnumerable
+    VBIDE.Windows
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CreateToolWindow(AddIn(In, HasFieldMarshal), String(In, HasFieldMarshal), String(In, HasFieldMarshal), String(In, HasFieldMarshal), Object&(In, Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE.Windows: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._Windows
+    VBIDE._Windows_old
+    System.Collections.IEnumerable
+Interface VBIDE._LinkedWindows: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Window Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(Window(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Add(Window(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.LinkedWindowsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._LinkedWindows
+    System.Collections.IEnumerable
+    VBIDE.LinkedWindows
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Window Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(Window(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(Window(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE.LinkedWindows: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._LinkedWindows
+    System.Collections.IEnumerable
+Interface VBIDE.Events: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.ReferencesEvents ReferencesEvents [VBIDE.VBProject] 'get ' : 
+    VBIDE.CommandBarEvents CommandBarEvents [System.Object] 'get ' : 
+  Methods:
+    get_ReferencesEvents(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CommandBarEvents(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface VBIDE._VBProjectsEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface VBIDE._dispVBProjectsEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    ItemAdded(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemRemoved(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemRenamed(VBProject(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemActivated(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface VBIDE._VBComponentsEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface VBIDE._dispVBComponentsEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    ItemAdded(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemRemoved(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemRenamed(VBComponent(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemSelected(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemActivated(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemReloaded(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface VBIDE._ReferencesEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface VBIDE._dispReferencesEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    ItemAdded(Reference(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemRemoved(Reference(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.ReferencesEventsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._ReferencesEvents
+    VBIDE.ReferencesEvents
+    VBIDE._dispReferencesEvents_Event
+  Events:
+    VBIDE._dispReferencesEvents_ItemAddedEventHandler ItemAdded: 
+    VBIDE._dispReferencesEvents_ItemRemovedEventHandler ItemRemoved: 
+  Methods:
+    add_ItemAdded(_dispReferencesEvents_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_ItemAdded(_dispReferencesEvents_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_ItemRemoved(_dispReferencesEvents_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_ItemRemoved(_dispReferencesEvents_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE._dispReferencesEvents_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    VBIDE._dispReferencesEvents_ItemAddedEventHandler ItemAdded: 
+    VBIDE._dispReferencesEvents_ItemRemovedEventHandler ItemRemoved: 
+  Methods:
+    add_ItemAdded(_dispReferencesEvents_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_ItemAdded(_dispReferencesEvents_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_ItemRemoved(_dispReferencesEvents_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_ItemRemoved(_dispReferencesEvents_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE._dispReferencesEvents_ItemAddedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Reference(In, HasFieldMarshal)): PrivateScope, Public, Virtual
+Class VBIDE._dispReferencesEvents_ItemRemovedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Reference(In, HasFieldMarshal)): PrivateScope, Public, Virtual
+Interface VBIDE.ReferencesEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._ReferencesEvents
+    VBIDE._dispReferencesEvents_Event
+Interface VBIDE._CommandBarControlEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface VBIDE._dispCommandBarControlEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    Click(Object(In, HasFieldMarshal), Boolean&(In), Boolean&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.CommandBarEventsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._CommandBarControlEvents
+    VBIDE.CommandBarEvents
+    VBIDE._dispCommandBarControlEvents_Event
+  Events:
+    VBIDE._dispCommandBarControlEvents_ClickEventHandler Click: 
+  Methods:
+    add_Click(_dispCommandBarControlEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_Click(_dispCommandBarControlEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE._dispCommandBarControlEvents_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    VBIDE._dispCommandBarControlEvents_ClickEventHandler Click: 
+  Methods:
+    add_Click(_dispCommandBarControlEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_Click(_dispCommandBarControlEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE._dispCommandBarControlEvents_ClickEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object(In, HasFieldMarshal), Boolean&(In), Boolean&(In)): PrivateScope, Public, Virtual
+Interface VBIDE.CommandBarEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._CommandBarControlEvents
+    VBIDE._dispCommandBarControlEvents_Event
+Interface VBIDE._ProjectTemplate: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.ProjectTemplateClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._ProjectTemplate
+    VBIDE.ProjectTemplate
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.ProjectTemplate: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._ProjectTemplate
+Struct VBIDE.vbext_ProjectType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_ProjectType vbext_pt_HostProject = 100 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ProjectType vbext_pt_StandAlone = 101 : Public, Static, Literal, HasDefault
+Struct VBIDE.vbext_ProjectProtection: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_ProjectProtection vbext_pp_none = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ProjectProtection vbext_pp_locked = 1 : Public, Static, Literal, HasDefault
+Struct VBIDE.vbext_VBAMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_VBAMode vbext_vm_Run = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_VBAMode vbext_vm_Break = 1 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_VBAMode vbext_vm_Design = 2 : Public, Static, Literal, HasDefault
+Interface VBIDE._VBProject_Old: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._ProjectTemplate
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+    System.String HelpFile 'get set' : 
+    Int32 HelpContextID 'get set' : 
+    System.String Description 'get set' : 
+    VBIDE.vbext_VBAMode Mode 'get ' : 
+    VBIDE.References References 'get ' : 
+    System.String Name 'get set' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBProjects Collection 'get ' : 
+    VBIDE.vbext_ProjectProtection Protection 'get ' : 
+    Boolean Saved 'get ' : 
+    VBIDE.VBComponents VBComponents 'get ' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HelpFile(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_HelpFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HelpContextID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_HelpContextID(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Description(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Mode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_References(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Protection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Saved(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBComponents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface VBIDE._VBProject: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBProject_Old
+    VBIDE._ProjectTemplate
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+    System.String HelpFile 'get set' : 
+    Int32 HelpContextID 'get set' : 
+    System.String Description 'get set' : 
+    VBIDE.vbext_VBAMode Mode 'get ' : 
+    VBIDE.References References 'get ' : 
+    System.String Name 'get set' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBProjects Collection 'get ' : 
+    VBIDE.vbext_ProjectProtection Protection 'get ' : 
+    Boolean Saved 'get ' : 
+    VBIDE.VBComponents VBComponents 'get ' : 
+    VBIDE.vbext_ProjectType Type 'get ' : 
+    System.String FileName 'get ' : 
+    System.String BuildFileName 'get set' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HelpFile(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_HelpFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HelpContextID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_HelpContextID(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Description(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Mode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_References(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Protection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Saved(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBComponents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SaveAs(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MakeCompiledFile(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_FileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BuildFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BuildFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.VBProjectClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._VBProject
+    VBIDE._VBProject_Old
+    VBIDE._ProjectTemplate
+    VBIDE.VBProject
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Application Parent 'get ' : 
+    System.String HelpFile 'get set' : 
+    Int32 HelpContextID 'get set' : 
+    System.String Description 'get set' : 
+    VBIDE.vbext_VBAMode Mode 'get ' : 
+    VBIDE.References References 'get ' : 
+    System.String Name 'get set' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBProjects Collection 'get ' : 
+    VBIDE.vbext_ProjectProtection Protection 'get ' : 
+    Boolean Saved 'get ' : 
+    VBIDE.VBComponents VBComponents 'get ' : 
+    VBIDE.vbext_ProjectType Type 'get ' : 
+    System.String FileName 'get ' : 
+    System.String BuildFileName 'get set' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_HelpFile(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_HelpFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_HelpContextID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_HelpContextID(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Description(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Mode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_References(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Protection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Saved(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VBComponents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SaveAs(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    MakeCompiledFile(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BuildFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BuildFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.VBProject: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBProject
+    VBIDE._VBProject_Old
+    VBIDE._ProjectTemplate
+Interface VBIDE._VBProjects_Old: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBE Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface VBIDE._VBProjects: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBProjects_Old
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBE Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Add(vbext_ProjectType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Open(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.VBProjectsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._VBProjects
+    VBIDE._VBProjects_Old
+    System.Collections.IEnumerable
+    VBIDE.VBProjects
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBE Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(vbext_ProjectType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(VBProject(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Open(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE.VBProjects: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBProjects
+    VBIDE._VBProjects_Old
+    System.Collections.IEnumerable
+Interface VBIDE.SelectedComponents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.VBProject Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    Item(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct VBIDE.vbext_ComponentType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_ComponentType vbext_ct_StdModule = 1 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ComponentType vbext_ct_ClassModule = 2 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ComponentType vbext_ct_MSForm = 3 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ComponentType vbext_ct_ActiveXDesigner = 11 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ComponentType vbext_ct_Document = 100 : Public, Static, Literal, HasDefault
+Interface VBIDE._Components: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.VBProject Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(Component(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Add(vbext_ComponentType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Import(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.ComponentsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._Components
+    System.Collections.IEnumerable
+    VBIDE.Components
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.VBProject Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(Component(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(vbext_ComponentType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Import(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.Components: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._Components
+    System.Collections.IEnumerable
+Interface VBIDE._VBComponents_Old: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBProject Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Add(vbext_ComponentType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Import(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface VBIDE._VBComponents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBComponents_Old
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBProject Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Add(vbext_ComponentType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Import(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    AddCustom(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddMTDesigner(Int32(In, Optional, HasDefault)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.VBComponentsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._VBComponents
+    VBIDE._VBComponents_Old
+    System.Collections.IEnumerable
+    VBIDE.VBComponents
+  Properties:
+    VBIDE.VBProject Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(VBComponent(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(vbext_ComponentType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Import(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    AddCustom(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddMTDesigner(Int32(In, Optional, HasDefault)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE.VBComponents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBComponents
+    VBIDE._VBComponents_Old
+    System.Collections.IEnumerable
+Interface VBIDE._Component: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Components Parent 'get ' : 
+    Boolean IsDirty 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_IsDirty(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.ComponentClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._Component
+    VBIDE.Component
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Components Parent 'get ' : 
+    Boolean IsDirty 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_IsDirty(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.Component: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._Component
+Interface VBIDE._VBComponent_Old: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Boolean Saved 'get ' : 
+    System.String Name 'get set' : 
+    System.Object Designer 'get ' : 
+    VBIDE.CodeModule CodeModule 'get ' : 
+    VBIDE.vbext_ComponentType Type 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBComponents Collection 'get ' : 
+    Boolean HasOpenDesigner 'get ' : 
+    VBIDE.Properties Properties 'get ' : 
+  Methods:
+    get_Saved(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Designer(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CodeModule(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Export(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HasOpenDesigner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Properties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    DesignerWindow(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Activate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface VBIDE._VBComponent: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBComponent_Old
+  Properties:
+    Boolean Saved 'get ' : 
+    System.String Name 'get set' : 
+    System.Object Designer 'get ' : 
+    VBIDE.CodeModule CodeModule 'get ' : 
+    VBIDE.vbext_ComponentType Type 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBComponents Collection 'get ' : 
+    Boolean HasOpenDesigner 'get ' : 
+    VBIDE.Properties Properties 'get ' : 
+    System.String DesignerID 'get ' : 
+  Methods:
+    get_Saved(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Designer(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CodeModule(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Export(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HasOpenDesigner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Properties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    DesignerWindow(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Activate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_DesignerID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.VBComponentClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._VBComponent
+    VBIDE._VBComponent_Old
+    VBIDE.VBComponent
+  Properties:
+    Boolean Saved 'get ' : 
+    System.String Name 'get set' : 
+    System.Object Designer 'get ' : 
+    VBIDE.CodeModule CodeModule 'get ' : 
+    VBIDE.vbext_ComponentType Type 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.VBComponents Collection 'get ' : 
+    Boolean HasOpenDesigner 'get ' : 
+    VBIDE.Properties Properties 'get ' : 
+    System.String DesignerID 'get ' : 
+  Methods:
+    get_Saved(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Designer(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CodeModule(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Export(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_HasOpenDesigner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Properties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    DesignerWindow(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Activate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_DesignerID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.VBComponent: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._VBComponent
+    VBIDE._VBComponent_Old
+Interface VBIDE.Property: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.Object Value 'get set' : 
+    System.Object IndexedValue [System.Object, System.Object, System.Object, System.Object] 'get set' : 
+    Int16 NumIndices 'get ' : 
+    VBIDE.Application Application 'get ' : 
+    VBIDE.Properties Parent 'get ' : 
+    System.String Name 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Properties Collection 'get ' : 
+    System.Object Object 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Value(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IndexedValue(Object(In, HasFieldMarshal), Object(In, Optional, HasFieldMarshal), Object(In, Optional, HasFieldMarshal), Object(In, Optional, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_IndexedValue(Object(In, HasFieldMarshal), Object(In, Optional, HasFieldMarshal), Object(In, Optional, HasFieldMarshal), Object(In, Optional, HasFieldMarshal), Object(In, Optional, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_NumIndices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Object(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Object(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface VBIDE._Properties: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    System.Object Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.PropertiesClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._Properties
+    System.Collections.IEnumerable
+    VBIDE.Properties
+  Properties:
+    VBIDE.Application Application 'get ' : 
+    System.Object Parent 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Application(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.Properties: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._Properties
+    System.Collections.IEnumerable
+Interface VBIDE._AddIns: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    System.Object Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.AddinsClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._AddIns
+    System.Collections.IEnumerable
+    VBIDE.Addins
+  Properties:
+    VBIDE.VBE VBE 'get ' : 
+    System.Object Parent 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Update(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE.Addins: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._AddIns
+    System.Collections.IEnumerable
+Interface VBIDE.AddIn: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Description 'get set' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Addins Collection 'get ' : 
+    System.String ProgId 'get ' : 
+    System.String Guid 'get ' : 
+    Boolean Connect 'get set' : 
+    System.Object Object 'get set' : 
+  Methods:
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Description(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ProgId(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Guid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Connect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Connect(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Object(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Object(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct VBIDE.vbext_ProcKind: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_ProcKind vbext_pk_Proc = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ProcKind vbext_pk_Let = 1 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ProcKind vbext_pk_Set = 2 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_ProcKind vbext_pk_Get = 3 : Public, Static, Literal, HasDefault
+Interface VBIDE._CodeModule: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.VBComponent Parent 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    System.String Name 'get set' : 
+    System.String Lines [Int32, Int32] 'get ' : 
+    Int32 CountOfLines 'get ' : 
+    Int32 ProcStartLine [System.String, VBIDE.vbext_ProcKind] 'get ' : 
+    Int32 ProcCountLines [System.String, VBIDE.vbext_ProcKind] 'get ' : 
+    Int32 ProcBodyLine [System.String, VBIDE.vbext_ProcKind] 'get ' : 
+    System.String ProcOfLine [Int32, VBIDE.vbext_ProcKind ByRef] 'get ' : 
+    Int32 CountOfDeclarationLines 'get ' : 
+    VBIDE.CodePane CodePane 'get ' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    AddFromString(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddFromFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Lines(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CountOfLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    InsertLines(Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeleteLines(Int32(In), Int32(In, Optional, HasDefault)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ReplaceLine(Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ProcStartLine(String(In, HasFieldMarshal), vbext_ProcKind(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ProcCountLines(String(In, HasFieldMarshal), vbext_ProcKind(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ProcBodyLine(String(In, HasFieldMarshal), vbext_ProcKind(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ProcOfLine(Int32(In), vbext_ProcKind&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CountOfDeclarationLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    CreateEventProc(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Find(String(In, HasFieldMarshal), Int32&(In, Out), Int32&(In, Out), Int32&(In, Out), Int32&(In, Out), Boolean(In, Optional, HasDefault), Boolean(In, Optional, HasDefault), Boolean(In, Optional, HasDefault)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_CodePane(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.CodeModuleClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._CodeModule
+    VBIDE.CodeModule
+  Properties:
+    VBIDE.VBComponent Parent 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    System.String Name 'get set' : 
+    System.String Lines [Int32, Int32] 'get ' : 
+    Int32 CountOfLines 'get ' : 
+    Int32 ProcStartLine [System.String, VBIDE.vbext_ProcKind] 'get ' : 
+    Int32 ProcCountLines [System.String, VBIDE.vbext_ProcKind] 'get ' : 
+    Int32 ProcBodyLine [System.String, VBIDE.vbext_ProcKind] 'get ' : 
+    System.String ProcOfLine [Int32, VBIDE.vbext_ProcKind ByRef] 'get ' : 
+    Int32 CountOfDeclarationLines 'get ' : 
+    VBIDE.CodePane CodePane 'get ' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Name(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    AddFromString(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddFromFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Lines(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CountOfLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    InsertLines(Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DeleteLines(Int32(In), Int32(In, Optional, HasDefault)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ReplaceLine(Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_ProcStartLine(String(In, HasFieldMarshal), vbext_ProcKind(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ProcCountLines(String(In, HasFieldMarshal), vbext_ProcKind(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ProcBodyLine(String(In, HasFieldMarshal), vbext_ProcKind(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ProcOfLine(Int32(In), vbext_ProcKind&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CountOfDeclarationLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CreateEventProc(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Find(String(In, HasFieldMarshal), Int32&(In, Out), Int32&(In, Out), Int32&(In, Out), Int32&(In, Out), Boolean(In, Optional, HasDefault), Boolean(In, Optional, HasDefault), Boolean(In, Optional, HasDefault)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_CodePane(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.CodeModule: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._CodeModule
+Interface VBIDE._CodePanes: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBE Parent 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.CodePane Current 'get set' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Current(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Current(CodePane(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.CodePanesClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._CodePanes
+    System.Collections.IEnumerable
+    VBIDE.CodePanes
+  Properties:
+    VBIDE.VBE Parent 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    Int32 Count 'get ' : 
+    VBIDE.CodePane Current 'get set' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Current(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Current(CodePane(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.CodePanes: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._CodePanes
+    System.Collections.IEnumerable
+Struct VBIDE.vbext_CodePaneview: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_CodePaneview vbext_cv_ProcedureView = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_CodePaneview vbext_cv_FullModuleView = 1 : Public, Static, Literal, HasDefault
+Interface VBIDE._CodePane: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.CodePanes Collection 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Window Window 'get ' : 
+    Int32 TopLine 'get set' : 
+    Int32 CountOfVisibleLines 'get ' : 
+    VBIDE.CodeModule CodeModule 'get ' : 
+    VBIDE.vbext_CodePaneview CodePaneView 'get ' : 
+  Methods:
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Window(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetSelection(Int32&(Out), Int32&(Out), Int32&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetSelection(Int32(In), Int32(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_TopLine(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TopLine(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CountOfVisibleLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CodeModule(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Show(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_CodePaneView(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class VBIDE.CodePaneClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._CodePane
+    VBIDE.CodePane
+  Properties:
+    VBIDE.CodePanes Collection 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    VBIDE.Window Window 'get ' : 
+    Int32 TopLine 'get set' : 
+    Int32 CountOfVisibleLines 'get ' : 
+    VBIDE.CodeModule CodeModule 'get ' : 
+    VBIDE.vbext_CodePaneview CodePaneView 'get ' : 
+  Methods:
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Window(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetSelection(Int32&(Out), Int32&(Out), Int32&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetSelection(Int32(In), Int32(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_TopLine(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_TopLine(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CountOfVisibleLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CodeModule(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Show(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_CodePaneView(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface VBIDE.CodePane: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._CodePane
+Interface VBIDE._References: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    VBIDE.VBProject Parent 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddFromGuid(String(In, HasFieldMarshal), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddFromFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(Reference(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct VBIDE.vbext_RefKind: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VBIDE.vbext_RefKind vbext_rk_TypeLib = 0 : Public, Static, Literal, HasDefault
+    VBIDE.vbext_RefKind vbext_rk_Project = 1 : Public, Static, Literal, HasDefault
+Interface VBIDE.Reference: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    VBIDE.References Collection 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    System.String Name 'get ' : 
+    System.String Guid 'get ' : 
+    Int32 Major 'get ' : 
+    Int32 Minor 'get ' : 
+    System.String FullPath 'get ' : 
+    Boolean BuiltIn 'get ' : 
+    Boolean IsBroken 'get ' : 
+    VBIDE.vbext_RefKind Type 'get ' : 
+    System.String Description 'get ' : 
+  Methods:
+    get_Collection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Guid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Major(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Minor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_FullPath(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BuiltIn(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsBroken(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface VBIDE._dispReferences_Events: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    ItemAdded(Reference(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ItemRemoved(Reference(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE.ReferencesClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    VBIDE._References
+    System.Collections.IEnumerable
+    VBIDE.References
+    VBIDE._dispReferences_Events_Event
+  Properties:
+    VBIDE.VBProject Parent 'get ' : 
+    VBIDE.VBE VBE 'get ' : 
+    Int32 Count 'get ' : 
+  Events:
+    VBIDE._dispReferences_Events_ItemAddedEventHandler ItemAdded: 
+    VBIDE._dispReferences_Events_ItemRemovedEventHandler ItemRemoved: 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VBE(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddFromGuid(String(In, HasFieldMarshal), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddFromFile(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(Reference(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_ItemAdded(_dispReferences_Events_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_ItemAdded(_dispReferences_Events_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_ItemRemoved(_dispReferences_Events_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_ItemRemoved(_dispReferences_Events_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface VBIDE._dispReferences_Events_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    VBIDE._dispReferences_Events_ItemAddedEventHandler ItemAdded: 
+    VBIDE._dispReferences_Events_ItemRemovedEventHandler ItemRemoved: 
+  Methods:
+    add_ItemAdded(_dispReferences_Events_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_ItemAdded(_dispReferences_Events_ItemAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_ItemRemoved(_dispReferences_Events_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_ItemRemoved(_dispReferences_Events_ItemRemovedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class VBIDE._dispReferences_Events_ItemAddedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Reference(HasFieldMarshal)): PrivateScope, Public, Virtual
+Class VBIDE._dispReferences_Events_ItemRemovedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Reference(HasFieldMarshal)): PrivateScope, Public, Virtual
+Interface VBIDE.References: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    VBIDE._References
+    System.Collections.IEnumerable
+    VBIDE._dispReferences_Events_Event
+Class VBIDE._dispCommandBarControlEvents_SinkHelper: AutoLayout, AnsiClass, Class, Public, Sealed
+  Interfaces:
+    VBIDE._dispCommandBarControlEvents
+  Fields:
+    VBIDE._dispCommandBarControlEvents_ClickEventHandler m_ClickDelegate : Public
+    Int32 m_dwCookie : Public
+  Methods:
+    Click(Object, Boolean&, Boolean&): PrivateScope, Public, Virtual
+Class VBIDE._dispReferences_Events_SinkHelper: AutoLayout, AnsiClass, Class, Public, Sealed
+  Interfaces:
+    VBIDE._dispReferences_Events
+  Fields:
+    VBIDE._dispReferences_Events_ItemAddedEventHandler m_ItemAddedDelegate : Public
+    VBIDE._dispReferences_Events_ItemRemovedEventHandler m_ItemRemovedDelegate : Public
+    Int32 m_dwCookie : Public
+  Methods:
+    ItemAdded(Reference): PrivateScope, Public, Virtual
+    ItemRemoved(Reference): PrivateScope, Public, Virtual
+Class VBIDE._dispReferencesEvents_SinkHelper: AutoLayout, AnsiClass, Class, Public, Sealed
+  Interfaces:
+    VBIDE._dispReferencesEvents
+  Fields:
+    VBIDE._dispReferencesEvents_ItemAddedEventHandler m_ItemAddedDelegate : Public
+    VBIDE._dispReferencesEvents_ItemRemovedEventHandler m_ItemRemovedDelegate : Public
+    Int32 m_dwCookie : Public
+  Methods:
+    ItemAdded(Reference): PrivateScope, Public, Virtual
+    ItemRemoved(Reference): PrivateScope, Public, Virtual

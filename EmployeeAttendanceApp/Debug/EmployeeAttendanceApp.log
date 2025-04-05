@@ -1,0 +1,9 @@
+﻿  main.cpp
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\MainForm.h(666,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\MainForm.h(667,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  EmployeeAttendanceApp.vcxproj -> C:\Users\Lara\source\repos\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.exe

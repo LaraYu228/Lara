@@ -1,0 +1,7 @@
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.vcxproj.AssemblyReference.cache
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.vcxproj.ResolveComReference.cache
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.AuthForm.resources
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.MainForm.resources
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.vcxproj.GenerateResource.cache
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.GrafikForm.resources
+C:\Users\Lara\source\repos\EmployeeAttendanceApp\EmployeeAttendanceApp\Debug\EmployeeAttendanceApp.QueryForm.resources
